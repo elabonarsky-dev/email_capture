@@ -1,0 +1,15 @@
+# Netlify Configuration
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+# Environment variables (set these in Netlify dashboard)
+# ZEROBOUNCE_API_KEY=your_key_here
+# BEEHIIV_API_KEY=your_key_here
+# BEEHIIV_PUBLICATION_ID=your_pub_id_here
+

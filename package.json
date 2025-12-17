@@ -1,0 +1,24 @@
+{
+  "name": "email-capture-kiosk",
+  "version": "1.0.0",
+  "description": "Production-ready email capture system for live event kiosk use",
+  "main": "app.js",
+  "scripts": {
+    "dev": "python -m http.server 8000",
+    "proxy": "node local-proxy-server.js",
+    "test": "echo \"Open index.html in your browser to test\"",
+    "deploy:netlify": "netlify deploy --prod",
+    "deploy:vercel": "vercel --prod"
+  },
+  "keywords": [
+    "email",
+    "capture",
+    "kiosk",
+    "zerobounce",
+    "beehiiv"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {}
+}
+
