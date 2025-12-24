@@ -1,0 +1,174 @@
+╔═══════════════════════════════════════════════════════════════╗
+║                                                               ║
+║              📋 STAFF QUICK REFERENCE CARD                    ║
+║           Email Capture Kiosk - Anime LA 2024                 ║
+║                                                               ║
+╚═══════════════════════════════════════════════════════════════╝
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  🎁 WHEN TO GIVE ASHCAN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+     ✅ GIVE ASHCAN ONLY IF YOU SEE THIS:
+
+          ╔═══════════════════════════════════════╗
+          ║                                       ║
+          ║              ✓                        ║
+          ║                                       ║
+          ║      HIVE ACCESS CONFIRMED            ║
+          ║                                       ║
+          ║   Show this screen to receive         ║
+          ║   your ashcan                         ║
+          ║                                       ║
+          ║   [ RESET FOR NEXT ATTENDEE ]         ║
+          ║                                       ║
+          ╚═══════════════════════════════════════╝
+
+          • FULL SCREEN with big checkmark
+          • Says "HIVE ACCESS CONFIRMED"
+          • This means email is validated AND confirmed
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ❌ DO NOT GIVE ASHCAN IF YOU SEE:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+     1. ⏳ PENDING MODAL (Yellow/Warning)
+
+          ╔═══════════════════════════════════════╗
+          ║           ⏳                           ║
+          ║   Saved - Pending Confirmation        ║
+          ║                                       ║
+          ║   Email saved, waiting for            ║
+          ║   connection...                       ║
+          ║                                       ║
+          ║           [ OK ]                      ║
+          ╚═══════════════════════════════════════╝
+
+          → Click OK, returns to form
+          → ❌ NO ASHCAN (not confirmed yet)
+
+
+     2. 💾 OFFLINE MODAL (Blue/Info)
+
+          ╔═══════════════════════════════════════╗
+          ║           💾                           ║
+          ║   Saved - Pending Validation          ║
+          ║                                       ║
+          ║   Currently offline, will process     ║
+          ║   when connection returns...          ║
+          ║                                       ║
+          ║           [ OK ]                      ║
+          ╚═══════════════════════════════════════╝
+
+          → Click OK, returns to form
+          → ❌ NO ASHCAN (not validated yet)
+
+
+     3. ❌ ERROR MESSAGE (Red)
+
+          Email address is invalid
+
+          → Stays on form
+          → ❌ NO ASHCAN (email didn't work)
+
+
+     4. 📝 FORM IS VISIBLE
+
+          → If you see the email entry form, not confirmed yet
+          → ❌ NO ASHCAN
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  🔄 AFTER GIVING ASHCAN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+     1. Click "RESET FOR NEXT ATTENDEE" button
+     2. Screen returns to entry form
+     3. Ready for next person
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  🎯 SIMPLE RULE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+          BIG GREEN SCREEN = GIVE ASHCAN ✅
+          
+          ANYTHING ELSE = DON'T GIVE ASHCAN ❌
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  🔧 IF SOMETHING GOES WRONG
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+     📱 Offline Message Appearing:
+        • System working normally
+        • Emails are saved
+        • Will process when connection returns
+        • Tell attendee: "Thanks! Your email is saved."
+        • ❌ Don't give ashcan (not confirmed yet)
+
+     ⏳ Pending Message Appearing:
+        • Connection issue (temporary)
+        • Email is validated and saved
+        • Will send automatically soon
+        • Tell attendee: "Thanks! Your email is saved."
+        • ❌ Don't give ashcan (not confirmed yet)
+
+     ❌ Error Message:
+        • Email address invalid
+        • Ask attendee to try different email
+        • Or collect email manually on paper
+
+     🆘 Nothing Working:
+        • Click "🔧" icon (top right)
+        • Click "Clear All Data" if stuck
+        • Refresh browser (F5)
+        • Contact tech support
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  📊 CONTROL PANEL (Top Right 🔧)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+     Click 🔧 icon to see:
+     
+     • Validated: X     ← Confirmed emails (gave ashcan)
+     • Queued: X        ← Pending emails (didn't give ashcan)
+     • Status: Online/Offline
+
+     
+     Buttons:
+     • 🔄 Process Queue    ← Retry pending emails
+     • 📥 Export CSV       ← Download email list
+     • 🗑️ Clear All Data  ← Reset system
+     • View Stored Data   ← See all emails
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  🔒 PRIVACY NOTE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+     Email field ALWAYS clears after each person.
+     
+     Next person will NEVER see previous email.
+     
+     This is automatic - you don't need to do anything.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  📞 SUPPORT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+     Questions? Contact: [Your contact info]
+     
+     Remember: Big green screen = Give ashcan! ✅
+
+
+╔═══════════════════════════════════════════════════════════════╗
+║                                                               ║
+║        Keep this card at the kiosk for easy reference! 📋     ║
+║                                                               ║
+╚═══════════════════════════════════════════════════════════════╝
+

@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+
+# Environment variables (never commit these!)
+.env
+.env.local
+.env.production
+
+# Netlify
+.netlify/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Local testing
+local-test/
+
+# DO NOT COMMIT API KEYS
+# All API keys should be in Netlify Environment Variables
+# See NETLIFY-ENVIRONMENT-SETUP.md for instructions

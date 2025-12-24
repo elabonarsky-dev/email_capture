@@ -1,0 +1,716 @@
+/* ===================================
+   CSS Variables for Easy Customization
+   =================================== */
+:root {
+    --primary-color: #FF6B35;
+    --secondary-color: #004E89;
+    --success-color: #06D6A0;
+    --error-color: #EF476F;
+    --warning-color: #FFD166;
+    --text-dark: #2B2D42;
+    --text-light: #8D99AE;
+    --background: #F8F9FA;
+    --white: #FFFFFF;
+    --border-radius: 12px;
+    --transition: all 0.3s ease;
+}
+
+/* ===================================
+   Reset and Base Styles
+   =================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    background: var(--background);
+    color: var(--text-dark);
+}
+
+/* ===================================
+   App Container
+   =================================== */
+#app {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* ===================================
+   Screen Management
+   =================================== */
+.screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.screen.active {
+    display: flex;
+    opacity: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===================================
+   Form Screen
+   =================================== */
+#formScreen {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    padding: 40px;
+    background: var(--white);
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Logo */
+.logo-container {
+    margin-bottom: 30px;
+}
+
+.logo {
+    max-width: 150px;
+    height: auto;
+}
+
+/* Headings */
+.main-heading {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 16px;
+    letter-spacing: -1px;
+}
+
+.subheading {
+    font-size: 20px;
+    color: var(--text-light);
+    margin-bottom: 40px;
+}
+
+/* Email Form */
+.email-form {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.email-input {
+    width: 100%;
+    padding: 20px 24px;
+    font-size: 20px;
+    border: 3px solid #E0E0E0;
+    border-radius: var(--border-radius);
+    outline: none;
+    transition: var(--transition);
+    background: var(--white);
+}
+
+.email-input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(255, 107, 53, 0.1);
+}
+
+.email-input::placeholder {
+    color: #BDBDBD;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 24px;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--white);
+    background: var(--primary-color);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.submit-btn:hover {
+    background: #E85A2A;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+.submit-btn:disabled {
+    background: #BDBDBD;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Button Loading State */
+.btn-loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.spinner {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top-color: var(--white);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Status Messages */
+.status-message {
+    min-height: 60px;
+    padding: 16px;
+    margin-top: 20px;
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    line-height: 1.5;
+    transition: var(--transition);
+}
+
+.status-message.error {
+    background: #FFEBEE;
+    color: var(--error-color);
+    border: 2px solid var(--error-color);
+}
+
+.status-message.success {
+    background: #E8F5E9;
+    color: #2E7D32;
+    border: 2px solid var(--success-color);
+}
+
+.status-message.info {
+    background: #E3F2FD;
+    color: #1565C0;
+    border: 2px solid #2196F3;
+}
+
+.status-message.warning {
+    background: #FFF8E1;
+    color: #F57C00;
+    border: 2px solid var(--warning-color);
+}
+
+/* Offline Info */
+.offline-info {
+    margin-top: 20px;
+    padding: 12px;
+    background: #FFF8E1;
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+}
+
+.offline-badge {
+    background: var(--warning-color);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.queue-count {
+    color: var(--text-light);
+}
+
+/* ===================================
+   Confirmation Screen
+   =================================== */
+#confirmationScreen {
+    background: linear-gradient(135deg, var(--success-color) 0%, #04A777 100%);
+}
+
+.confirmation-container {
+    width: 90%;
+    max-width: 700px;
+    padding: 60px 40px;
+    background: var(--white);
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.confirmation-icon {
+    font-size: 120px;
+    color: var(--success-color);
+    margin-bottom: 30px;
+    animation: scaleIn 0.5s ease;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.confirmation-heading {
+    font-size: 56px;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+    line-height: 1.2;
+}
+
+.confirmation-text {
+    font-size: 28px;
+    color: var(--text-light);
+    margin-bottom: 50px;
+}
+
+.reset-btn {
+    padding: 20px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--white);
+    background: var(--secondary-color);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.reset-btn:hover {
+    background: #003D6B;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 78, 137, 0.3);
+}
+
+.reset-btn:active {
+    transform: translateY(0);
+}
+
+/* ===================================
+   Control Panel
+   =================================== */
+.control-panel {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.toggle-panel-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    background: var(--white);
+    border: 2px solid #E0E0E0;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: var(--transition);
+}
+
+.toggle-panel-btn:hover {
+    background: var(--background);
+    transform: rotate(90deg);
+}
+
+.panel-content {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 320px;
+    max-height: 80vh;
+    overflow-y: auto;
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+.panel-content h3 {
+    margin-bottom: 20px;
+    color: var(--text-dark);
+    font-size: 18px;
+    border-bottom: 2px solid #E0E0E0;
+    padding-bottom: 10px;
+}
+
+.panel-section {
+    margin-bottom: 16px;
+}
+
+.panel-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: var(--text-dark);
+    cursor: pointer;
+}
+
+.panel-label input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.panel-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 2px solid #E0E0E0;
+    border-radius: 8px;
+    margin-top: 8px;
+}
+
+.panel-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--white);
+    background: var(--secondary-color);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 8px;
+    transition: var(--transition);
+}
+
+.panel-btn:hover {
+    background: #003D6B;
+}
+
+.panel-btn.danger {
+    background: var(--error-color);
+}
+
+.panel-btn.danger:hover {
+    background: #D63554;
+}
+
+.stats {
+    background: var(--background);
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.stat {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+.stat-label {
+    color: var(--text-light);
+}
+
+.stat-value {
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+/* ===================================
+   Responsive Design
+   =================================== */
+@media (max-width: 768px) {
+    .main-heading {
+        font-size: 36px;
+    }
+    
+    .subheading {
+        font-size: 18px;
+    }
+    
+    .confirmation-heading {
+        font-size: 42px;
+    }
+    
+    .confirmation-text {
+        font-size: 22px;
+    }
+    
+    .container {
+        padding: 30px 20px;
+    }
+}
+
+/* iPad Specific Optimizations */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        max-width: 700px;
+    }
+    
+    .main-heading {
+        font-size: 54px;
+    }
+    
+    .email-input {
+        font-size: 24px;
+        padding: 24px;
+    }
+    
+    .submit-btn {
+        font-size: 26px;
+        padding: 28px;
+    }
+}
+
+/* Prevent text selection in kiosk mode */
+body.kiosk-mode {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body.kiosk-mode .email-input {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+/* ===================================
+   Custom Modal Dialogs (iPad-friendly)
+   =================================== */
+.custom-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.custom-modal.active {
+    display: block;
+    opacity: 1;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+}
+
+.modal-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+    from {
+        transform: scale(0.9) translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.modal-icon {
+    font-size: 64px;
+    margin-bottom: 20px;
+    animation: iconBounce 0.5s ease;
+}
+
+@keyframes iconBounce {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.modal-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 16px;
+}
+
+.modal-message {
+    font-size: 18px;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 30px;
+    white-space: pre-line;
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 10px;
+    text-align: left;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+/* Scrollbar styling for modal */
+.modal-message::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-message::-webkit-scrollbar-track {
+    background: #e0e0e0;
+    border-radius: 4px;
+}
+
+.modal-message::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+.modal-message::-webkit-scrollbar-thumb:hover {
+    background: #E85A2A;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.modal-btn {
+    min-width: 120px;
+    padding: 16px 32px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    touch-action: manipulation;
+}
+
+.modal-btn-primary {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.modal-btn-primary:hover {
+    background: #E85A2A;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+}
+
+.modal-btn-primary:active {
+    transform: translateY(0);
+}
+
+.modal-btn-secondary {
+    background: #E0E0E0;
+    color: var(--text-dark);
+}
+
+.modal-btn-secondary:hover {
+    background: #D0D0D0;
+}
+
+.modal-btn-secondary:active {
+    transform: scale(0.95);
+}
+
+/* Modal variations */
+.modal-content.modal-success .modal-icon {
+    color: var(--success-color);
+}
+
+.modal-content.modal-error .modal-icon {
+    color: var(--error-color);
+}
+
+.modal-content.modal-warning .modal-icon {
+    color: var(--warning-color);
+}
+
+.modal-content.modal-confirm .modal-icon {
+    color: var(--primary-color);
+}
+
+/* iPad-specific optimizations */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .modal-content {
+        max-width: 600px;
+        padding: 50px;
+    }
+    
+    .modal-icon {
+        font-size: 80px;
+    }
+    
+    .modal-title {
+        font-size: 32px;
+    }
+    
+    .modal-message {
+        font-size: 20px;
+        max-height: 500px;
+    }
+    
+    .modal-btn {
+        min-width: 150px;
+        padding: 20px 40px;
+        font-size: 20px;
+    }
+}
+
