@@ -72,93 +72,119 @@ body {
    Form Screen
    =================================== */
 #formScreen {
-    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    background: linear-gradient(135deg, #004E89 0%, #FF6B35 100%);
+    padding: 20px;
+    overflow-y: auto;
 }
 
 .container {
-    width: 90%;
-    max-width: 600px;
-    padding: 40px;
-    background: var(--white);
-    border-radius: 24px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 450px;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
     text-align: center;
 }
 
-/* Logo */
-.logo-container {
+/* Hero Image */
+.hero-image-container {
     margin-bottom: 30px;
+    position: relative;
+    animation: fadeInScale 0.8s ease-out;
 }
 
-.logo {
-    max-width: 150px;
+.hero-image {
+    width: 100%;
+    max-width: 100%;
     height: auto;
+    border-radius: 12px;
+    display: block;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.5));
 }
 
-/* Headings */
-.main-heading {
-    font-size: 48px;
-    font-weight: 700;
-    color: var(--text-dark);
-    margin-bottom: 16px;
-    letter-spacing: -1px;
-}
-
-.subheading {
-    font-size: 20px;
-    color: var(--text-light);
-    margin-bottom: 40px;
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 /* Email Form */
 .email-form {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
+    animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
 
 .email-input {
     width: 100%;
-    padding: 20px 24px;
-    font-size: 20px;
-    border: 3px solid #E0E0E0;
-    border-radius: var(--border-radius);
+    padding: 18px 24px;
+    font-size: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
     outline: none;
     transition: var(--transition);
-    background: var(--white);
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    font-weight: 400;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 .email-input:focus {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 4px rgba(255, 107, 53, 0.1);
+    border-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 6px 24px rgba(255, 255, 255, 0.4);
+    background: #FFFFFF;
+    transform: translateY(-2px);
 }
 
 .email-input::placeholder {
-    color: #BDBDBD;
+    color: rgba(100, 116, 139, 0.6);
+    font-weight: 400;
 }
 
 /* Submit Button */
 .submit-btn {
     width: 100%;
-    padding: 24px;
-    font-size: 22px;
-    font-weight: 600;
-    color: var(--white);
-    background: var(--primary-color);
+    padding: 18px 32px;
+    font-size: 18px;
+    font-weight: 800;
+    color: #1a202c;
+    background: linear-gradient(135deg, #FFD166 0%, #FF8C42 100%);
     border: none;
-    border-radius: var(--border-radius);
+    border-radius: 12px;
     cursor: pointer;
     transition: var(--transition);
     position: relative;
     overflow: hidden;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 6px 28px rgba(255, 140, 66, 0.5);
 }
 
 .submit-btn:hover {
-    background: #E85A2A;
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+    box-shadow: 0 10px 40px rgba(255, 140, 66, 0.7);
+    background: linear-gradient(135deg, #FFE166 0%, #FF9852 100%);
 }
 
 .submit-btn:active {
@@ -166,9 +192,10 @@ body {
 }
 
 .submit-btn:disabled {
-    background: #BDBDBD;
+    opacity: 0.7;
     cursor: not-allowed;
     transform: none;
+    box-shadow: 0 6px 28px rgba(255, 140, 66, 0.3);
 }
 
 /* Button Loading State */
@@ -196,60 +223,69 @@ body {
 /* Status Messages */
 .status-message {
     min-height: 60px;
-    padding: 16px;
+    padding: 16px 20px;
     margin-top: 20px;
-    border-radius: var(--border-radius);
+    border-radius: 12px;
     font-size: 16px;
     line-height: 1.5;
     transition: var(--transition);
+    font-weight: 600;
+    backdrop-filter: blur(10px);
 }
 
 .status-message.error {
-    background: #FFEBEE;
-    color: var(--error-color);
-    border: 2px solid var(--error-color);
+    background: rgba(239, 71, 111, 0.95);
+    color: #FFFFFF;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 16px rgba(239, 71, 111, 0.3);
 }
 
 .status-message.success {
-    background: #E8F5E9;
-    color: #2E7D32;
-    border: 2px solid var(--success-color);
+    background: rgba(6, 214, 160, 0.95);
+    color: #FFFFFF;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 16px rgba(6, 214, 160, 0.3);
 }
 
 .status-message.info {
-    background: #E3F2FD;
-    color: #1565C0;
-    border: 2px solid #2196F3;
+    background: rgba(33, 150, 243, 0.95);
+    color: #FFFFFF;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 16px rgba(33, 150, 243, 0.3);
 }
 
 .status-message.warning {
-    background: #FFF8E1;
-    color: #F57C00;
-    border: 2px solid var(--warning-color);
+    background: rgba(255, 209, 102, 0.95);
+    color: #1a202c;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 16px rgba(255, 209, 102, 0.3);
 }
 
 /* Offline Info */
 .offline-info {
     margin-top: 20px;
-    padding: 12px;
-    background: #FFF8E1;
-    border-radius: var(--border-radius);
+    padding: 16px 20px;
+    background: rgba(255, 209, 102, 0.95);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
     font-size: 14px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 16px rgba(255, 209, 102, 0.3);
 }
 
 .offline-badge {
-    background: var(--warning-color);
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-weight: 600;
+    font-weight: 700;
+    color: #1a202c;
 }
 
 .queue-count {
-    color: var(--text-light);
+    color: #2d3748;
+    font-weight: 600;
 }
 
 /* ===================================
